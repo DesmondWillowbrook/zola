@@ -47,8 +47,15 @@ fn opening_html(
         html.push_str(&classes);
         html.push('"');
     }
+    html.push('>');
 
-    html.push_str("><code");
+    html.push_str("<div class=\"language-name\">");
+    if let Some(lang) = language {
+        html.push_str(lang);
+    }
+    html.push_str("</div>");
+
+    html.push_str("<code");
     if let Some(lang) = language {
         html.push_str(" class=\"language-");
         html.push_str(lang);
