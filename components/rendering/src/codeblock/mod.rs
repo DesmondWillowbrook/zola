@@ -49,7 +49,7 @@ fn opening_html(
     }
     html.push('>');
 
-    html.push_str("<div class=\"language-name\">");
+    html.push_str("<span class=\"language-name\">");
     if let Some(lang) = language {
         html.push_str(lang);
     }
