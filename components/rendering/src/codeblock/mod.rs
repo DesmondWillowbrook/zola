@@ -53,7 +53,7 @@ fn opening_html(
     if let Some(lang) = language {
         html.push_str(lang);
     }
-    html.push_str("</div>");
+    html.push_str("</span>");
 
     html.push_str("<code");
     if let Some(lang) = language {
